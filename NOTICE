@@ -1,0 +1,21 @@
+Offboarding Cleanup Skill
+Copyright (C) 2026 mvlberry and contributors
+
+This project is distributed under the GNU Affero General Public License,
+version 3 only (SPDX: AGPL-3.0-only). See LICENSE.
+
+Workflow attribution:
+The device-offboarding, credential-cleanup, local-data-audit, and browser
+inspection workflows were informed by Computer Repair Skill, maintained
+by 88lin and its contributors:
+https://github.com/88lin/computer-repair-skill
+That upstream project is distributed under AGPL-3.0 and records further
+attribution in its own NOTICE. This repository rewrites and extends the
+guidance and does not bundle the upstream installer or executable helpers.
+
+Browser and application behavior references are linked in
+references/sources.md. Product names and trademarks belong to their owners.
+This project is not affiliated with or endorsed by the named products.
+
+The GNU license text in LICENSE is reproduced verbatim from:
+https://www.gnu.org/licenses/agpl-3.0.txt

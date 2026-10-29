@@ -1,0 +1,23 @@
+# Runtime data must never be published with the skill.
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.kdbx
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.bak
+*.zip
+reports/
+inventory/
+private/
+tmp/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.venv/

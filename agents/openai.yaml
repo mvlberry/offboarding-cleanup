@@ -1,0 +1,4 @@
+interface:
+  display_name: "离职清理"
+  short_description: "发现本机所有软件，清理浏览器数据与登录凭据，让目标账号重新扫码认证"
+  default_prompt: "使用 $offboarding-cleanup 先发现这台电脑实际存在的全部软件，逐项准备本地 Token、会话和免密凭据清理方案，让目标账号下次必须重新扫码或认证；包含浏览器书签、历史和 SSH 等开发凭据，只检查本机，先展示范围，不显示秘密内容。"
