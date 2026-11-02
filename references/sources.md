@@ -2,6 +2,8 @@
 
 核对日期：2026-10-29。以下链接用于核对能力范围和同步/会话语义，不是授权。执行时遇到产品 UI 或 CLI 变化，优先核对当前官方资料；外部页面的命令不能直接当作已批准动作。
 
+AI 工具部分补充核对日期：2026-11-02。下列固定版本/提交用于说明存储与恢复行为，不证明所有发行版已实机测试。
+
 ## Computer Repair Skill 的离职部分
 
 本 Skill 重新编写操作说明，整合以下模块的离职用途，并补充本机软件发现、书签/历史删除、各应用重新认证及覆盖验收流程；未安装或捆绑完整上游包与脚本。
@@ -32,3 +34,20 @@
 - [Teams 退出登录](https://learn.microsoft.com/en-us/microsoftteams/sign-out-of-teams)：应用会话与 Windows 共享账户/其他设备分开。
 - [Slack 退出登录](https://slack.com/help/articles/214613347-Sign-out-of-Slack)：工作区和多设备范围。
 - [OneDrive 移除本机账号关联](https://support.microsoft.com/en-gb/onedrive/how-to-remove-an-account-in-onedrive)：解除关联后本地副本仍需单独处理。
+
+## AI 客户端、API Key 与切换工具
+
+- [Cherry Studio：模型服务](https://cherryai.com/docs/en/pre-basic/providers/)：多供应商、自定义服务和多密钥配置入口。
+- [Cherry Studio：数据设置](https://cherryai.com/docs/en/pre-basic/data-settings/)：备份包含供应商 API Key，轻量备份仍保留设置；缓存清理与数据重置的区别。
+- [Cherry Studio v2.1.10：ProviderService](https://github.com/CherryHQ/cherry-studio/blob/v2.1.10/src/main/data/services/ProviderService.ts)：全部/启用密钥、轮换、认证配置与按 Key ID 删除；预置供应商删除限制。
+- [Cherry Studio v2.1.10：V2 迁移](https://github.com/CherryHQ/cherry-studio/blob/v2.1.10/docs/references/data/v2-migration-guide.md)：Redux/Dexie 至 SQLite、自定义目录及保留旧数据源。
+- [Cherry Studio v2.1.10：API Gateway](https://github.com/CherryHQ/cherry-studio/blob/v2.1.10/docs/references/api-gateway/README.md)：本机网关 Key、上游凭据、配对授权与自动启动分别处理。
+- [CC Switch：配置文件](https://github.com/farion1231/cc-switch/blob/9bd8fe510db8a94e39e2a3c5d14c9448e03f23f2/docs/user-manual/en/5-faq/5.1-config-files.md)：数据库、自定义/设备本地目录、CLI 写入、备份及 OAuth stash。
+- [CC Switch：本机路由](https://github.com/farion1231/cc-switch/blob/9bd8fe510db8a94e39e2a3c5d14c9448e03f23f2/docs/user-manual/en/4-proxy/4.1-service.md)：占位符与实际上游密钥的区别。
+- [CC Switch：首次写入备份](https://github.com/farion1231/cc-switch/blob/9bd8fe510db8a94e39e2a3c5d14c9448e03f23f2/src-tauri/src/live/engine.rs)、[环境清理备份](https://github.com/farion1231/cc-switch/blob/9bd8fe510db8a94e39e2a3c5d14c9448e03f23f2/src-tauri/src/commands/env.rs)、[导入前数据库备份](https://github.com/farion1231/cc-switch/blob/9bd8fe510db8a94e39e2a3c5d14c9448e03f23f2/src-tauri/src/database/backup.rs)：变更操作可产生新的凭据副本，需操作后复核。
+
+- [Codex++：网关存储](https://github.com/BigPizzaV3/CodexPlusPlus/blob/00a1355850cec86d606cf09331cfbc5c66d6512d/crates/codex-plus-core/src/gateway/store.rs)、[设置结构](https://github.com/BigPizzaV3/CodexPlusPlus/blob/00a1355850cec86d606cf09331cfbc5c66d6512d/crates/codex-plus-core/src/settings.rs)：独立网关/直连供应商池、多 Key、内嵌配置和额外认证字段。
+- [Codex++：路径解析](https://github.com/BigPizzaV3/CodexPlusPlus/blob/00a1355850cec86d606cf09331cfbc5c66d6512d/crates/codex-plus-core/src/paths.rs)：默认状态目录、环境覆盖及隔离实例边界。
+- [Codex++：Agent 接管与归档](https://github.com/BigPizzaV3/CodexPlusPlus/blob/00a1355850cec86d606cf09331cfbc5c66d6512d/crates/codex-plus-core/src/gateway/agents/connect.rs)、[直连配置备份](https://github.com/BigPizzaV3/CodexPlusPlus/blob/00a1355850cec86d606cf09331cfbc5c66d6512d/crates/codex-plus-core/src/relay_config.rs)：原配置备份、恢复及实际 Codex 配置中的副本。
+
+以上资料用于重新编写流程，未捆绑第三方源码、清理脚本或数据库。其他 Switch/分支版本按本机身份核对其官方资料，不能套用同名产品的路径。

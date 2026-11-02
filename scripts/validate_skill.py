@@ -12,7 +12,7 @@ FILES = (
     "SKILL.md", "agents/openai.yaml", "README.md", "LICENSE", "NOTICE", ".gitignore",
     "references/installed-app-discovery.md", "references/local-reauth.md",
     "references/app-signout.md", "references/browsers.md",
-    "references/credentials-and-data.md", "references/verification.md",
+    "references/credentials-and-data.md", "references/ai-api-keys.md", "references/verification.md",
     "references/sources.md", "docs/validation.md", "scripts/validate_skill.py",
 )
 
