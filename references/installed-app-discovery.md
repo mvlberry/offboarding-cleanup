@@ -86,7 +86,7 @@
 | 音乐视频与内容 | QQ 音乐、网易云音乐、酷狗、酷我、腾讯视频、爱奇艺、优酷、哔哩哔哩、抖音 | 账号、自动登录、下载内容与观看/收藏数据分开 |
 | 远程控制与连接 | 向日葵、ToDesk、腾讯电脑管家相关远控、AnyDesk、TeamViewer、RustDesk、远程桌面/VPN 客户端 | 账号与无人值守授权分开；企业远控不能擅自关闭 |
 | 开发与 AI | Git 客户端、IDE、数据库/SSH 客户端、Docker、云 CLI、Codex、Claude、Cursor、Trae、豆包等 | 应用账号、插件账号、Token、系统凭据库及 SSO；执行清理所需工具放最后 |
-| AI 客户端与供应商切换器 | Cherry Studio、CC Switch、Codex++ 及其他本机发现的 Switch/便携工具 | 全部目标 API Key、CLI 写入、代理、环境及备份恢复链；无扫码/登录页也需核对 |
+| AI 客户端、供应商切换器与网关 | Cherry Studio、CC Switch、Codex++、CC Mesh 及其他本机发现的 Switch/代理/便携工具 | 全部目标 API Key、CLI 写入、代理、环境及备份恢复链；无扫码/登录页或客户端 Key 留空也需核对 |
 | 游戏与启动器 | WeGame、Steam、Epic、暴雪战网、米哈游/HoYoPlay、各游戏启动器 | 多账号、扫码/免密登录；存档、购买权益和下载文件另列 |
 | 浏览器 | Edge、Chrome、Firefox、Brave、QQ 浏览器、360、搜狗、夸克及便携版本 | 每个配置文件、同步、书签、历史、站点会话、密码和通行密钥 |
 | 输入法与其他工具 | 搜狗输入法、QQ 输入法、百度输入法、截图/翻译/下载/压缩工具 | 云账号、词库同步或会员登录是否存在，不能根据工具类别断言无凭据 |

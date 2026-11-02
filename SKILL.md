@@ -3,7 +3,7 @@ name: offboarding-cleanup
 description: "离职或归还电脑前，只发现并检查本机实际存在的软件，覆盖中国大陆常用及未预设的应用、浏览器、办公/网盘/远控/开发工具；按授权清除本地 Token、会话、免密凭据与 AI 客户端/切换工具的 API Key，使目标服务需重新认证或提供密钥，并清理浏览器书签、历史与 SSH 等开发凭据。Windows 优先，兼顾 macOS/Linux。只创建/修改/发布本 Skill 时不执行真实清理。"
 license: "AGPL-3.0-only"
 metadata:
-  version: "1.3.0"
+  version: "1.3.1"
   language: "zh-CN"
 ---
 
@@ -36,7 +36,7 @@ API Key 类客户端或切换工具未必有账号登录页：其目标是**所�
 | 浏览器书签、历史、Cookie、密码、同步、多配置文件 | [浏览器流程](references/browsers.md) |
 | QQ、微信、飞书及其他桌面应用退出登录 | [应用退出流程](references/app-signout.md) |
 | SSH、Git、云 CLI、系统凭据、敏感文件与交接 | [凭据与资料流程](references/credentials-and-data.md) |
-| Cherry Studio、CC Switch、Codex++ 等 AI 客户端/切换工具的 API Key 与配置副本 | [AI 工具密钥清理](references/ai-api-keys.md) |
+| Cherry Studio、CC Switch、Codex++、CC Mesh 等 AI 客户端/切换工具/网关的 API Key 与配置副本 | [AI 工具密钥清理](references/ai-api-keys.md) |
 | 执行与验收、权限记录、未完成项 | [操作清单与验收](references/verification.md) |
 | 流程来源或版本核对 | [来源](references/sources.md) |
 

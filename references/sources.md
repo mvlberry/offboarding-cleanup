@@ -51,3 +51,15 @@ AI 工具部分补充核对日期：2026-11-02。下列固定版本/提交用于
 - [Codex++：Agent 接管与归档](https://github.com/BigPizzaV3/CodexPlusPlus/blob/00a1355850cec86d606cf09331cfbc5c66d6512d/crates/codex-plus-core/src/gateway/agents/connect.rs)、[直连配置备份](https://github.com/BigPizzaV3/CodexPlusPlus/blob/00a1355850cec86d606cf09331cfbc5c66d6512d/crates/codex-plus-core/src/relay_config.rs)：原配置备份、恢复及实际 Codex 配置中的副本。
 
 以上资料用于重新编写流程，未捆绑第三方源码、清理脚本或数据库。其他 Switch/分支版本按本机身份核对其官方资料，不能套用同名产品的路径。
+
+## CC Mesh 与同类本机网关
+
+核对日期：2026-11-02；官方项目 `VkRainB/ccMesh`，固定提交 `7cd325e3936698f3ef8b94760fdd6da187fef5dc`，源码版本 `0.2.11`。文档站可能展示不同发布版本，执行时按实际安装版本核实。
+
+- [官方接入说明](https://vkrainb.github.io/ccMesh/guide/quickstart.html)：客户端的本机网关 Key 可留空，与保存在上游端点中的凭据不同。
+- [路径解析](https://github.com/VkRainB/ccMesh/blob/7cd325e3936698f3ef8b94760fdd6da187fef5dc/src-tauri/src/utils/paths.rs)：使用实际 `app_data_dir()` 定位主库。
+- [端点与多凭据存储](https://github.com/VkRainB/ccMesh/blob/7cd325e3936698f3ef8b94760fdd6da187fef5dc/src-tauri/src/modules/storage/endpoint_repo.rs)：主 Key、多凭据、归档/停用与普通列表的差异。
+- [工具配置管理](https://github.com/VkRainB/ccMesh/blob/7cd325e3936698f3ef8b94760fdd6da187fef5dc/src-tauri/src/modules/tool_config/mod.rs)：渠道快照、基线记录、真实 CLI、应用前备份。
+- [JSON 导入导出](https://github.com/VkRainB/ccMesh/blob/7cd325e3936698f3ef8b94760fdd6da187fef5dc/src-tauri/src/modules/backup.rs)：包含 API Key/多凭据，排除 WebDAV 配置和归档端点，不能用导出代替完整盘点。
+- [WebDAV 配置白名单](https://github.com/VkRainB/ccMesh/blob/7cd325e3936698f3ef8b94760fdd6da187fef5dc/src-tauri/src/modules/storage/config_repo.rs)、[数据库备份与恢复](https://github.com/VkRainB/ccMesh/blob/7cd325e3936698f3ef8b94760fdd6da187fef5dc/src-tauri/src/modules/webdav/sync.rs)：数据库副本保留同步密码和上游凭据，区别于 JSON 导出；临时副本按实际残留核对。
+- [CC Switch 迁移读取](https://github.com/VkRainB/ccMesh/blob/7cd325e3936698f3ef8b94760fdd6da187fef5dc/src-tauri/src/modules/cc_switch_migration/reader.rs)：源库只读，导入不清除原凭据。
